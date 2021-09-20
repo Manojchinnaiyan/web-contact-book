@@ -19,10 +19,10 @@ const AddContact = ({ addContact }) => {
     }
   }
   return (
-    <div class='ui segment' style={{ backgroundColor: "#fff" }}>
-      <div class='ui big form'>
-        <div class='two fields'>
-          <div class='field'>
+    <div className='ui segment' style={{ backgroundColor: "#fff" }}>
+      <div className='ui big form'>
+        <div className='two fields'>
+          <div className='field'>
             <label>First Name</label>
             <input
               required
@@ -32,7 +32,7 @@ const AddContact = ({ addContact }) => {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div class='field'>
+          <div className='field'>
             <label>E-Mail</label>
             <input
               required
@@ -44,7 +44,7 @@ const AddContact = ({ addContact }) => {
           </div>
         </div>
 
-        <div class='ui submit'>
+        <div className='ui submit'>
           <button className='ui button primary' onClick={onsubmit}>
             Add
           </button>

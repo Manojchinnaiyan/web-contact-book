@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react"
 import Addcontact from "./components/Addcontact"
 import Contactlist from "./components/Contactlist"
 import ContactDetails from "./components/ContactDetails"
-import { uuid } from "uuidv4"
+import { v4 as uuid } from "uuid"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Header from "./components/Header"
 import UpdateContact from "./components/UpdateContact"
-import { Box, Grid } from "@material-ui/core"
 
 const App = () => {
   const LOCAL_STORAGE_KEY = "contacts"

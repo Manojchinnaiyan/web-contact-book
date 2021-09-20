@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import React, { useState } from "react"
 import { useHistory } from "react-router"
 import { useLocation } from "react-router"
-import { Button } from "@material-ui/core"
 
 const UpdateContact = ({ updateContact }) => {
   const location = useLocation()
@@ -23,31 +22,40 @@ const UpdateContact = ({ updateContact }) => {
     }
   }
   return (
-    <div className='ui container center'>
-      <form className='ui form'>
-        <label>Name</label>
-        <input
-          required
-          placeholder='Name'
-          name='name'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label>Email</label>
-        <input
-          required
-          placeholder='Email'
-          name='email'
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </form>
-      <button className='ui button primary' onClick={onsubmit}>
-        Update
-      </button>
-      <Link to='/'>
-        <Button>Back</Button>
-      </Link>
+    <div className='ui segment' style={{ backgroundColor: "#fff" }}>
+      <div className='ui big form'>
+        <div className='two fields'>
+          <div className='field'>
+            <label>First Name</label>
+            <input
+              required
+              placeholder='Name'
+              name='name'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className='field'>
+            <label>E-Mail</label>
+            <input
+              required
+              placeholder='Email'
+              name='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className='ui submit'>
+          <button className='ui button primary' onClick={onsubmit}>
+            Add
+          </button>
+          <Link to='/'>
+            <button className='ui button primary'>Back</button>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

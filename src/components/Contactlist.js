@@ -1,7 +1,6 @@
 import React from "react"
 import ContactCard from "./ContactCard"
 import { Link } from "react-router-dom"
-import { Box, Button, Grid, Typography } from "@material-ui/core"
 
 const ContactList = ({
   contacts,
@@ -21,8 +20,8 @@ const ContactList = ({
   return (
     <div className='ui middle aligned center aligned grid'>
       <div className='column'>
-        <div class='ui right aligned category search'>
-          <div class='ui icon input'>
+        <div className='ui right aligned category search'>
+          <div className='ui icon input'>
             <input
               className='prompt'
               type='text'
@@ -36,9 +35,9 @@ const ContactList = ({
         </div>
 
         <Link to='/add'>
-          <div class='ui teal labeled icon button'>
+          <div className='ui teal labeled icon button'>
             Create New Contact
-            <i class='add icon'></i>
+            <i className='add icon'></i>
           </div>
         </Link>
         {contacts.map((contact, key) => (

@@ -1,17 +1,18 @@
 import React from "react"
-import { useLocation, useHistory, Redirect } from "react-router"
+import { useLocation } from "react-router"
 import { Link } from "react-router-dom"
 
 const ContactDetails = () => {
   const location = useLocation()
-  const history = useHistory()
   const { contact } = location.state
   const { name, email } = contact
 
   return (
     <div className='column'>
       <div className='ui raised segment'>
-        <a className='ui red ribbon label'>{name}</a>
+        <a className='ui red ribbon label' href='/#'>
+          {name}
+        </a>
 
         <div className='content'>
           <h1>

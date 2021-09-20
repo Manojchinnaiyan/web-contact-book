@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 const ContactCard = ({ contact, deleteContact, updateContact }) => {
   const { id, name, email } = contact
   return (
-    <div class='ui middle aligned divided list'>
-      <div class='item'>
-        <div class='right floated content' style={{ marginTop: "10px" }}>
+    <div className='ui middle aligned divided list'>
+      <div className='item'>
+        <div className='right floated content' style={{ marginTop: "10px" }}>
           <button
             className='ui button red'
             onClick={() => deleteContact(contact.id)}
@@ -29,7 +29,7 @@ const ContactCard = ({ contact, deleteContact, updateContact }) => {
         </Link>
 
         <div
-          class='content'
+          className='content'
           style={{
             backgroundColor: "#fff",
             borderRadius: "30px",
