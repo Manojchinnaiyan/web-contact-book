@@ -40,13 +40,17 @@ const ContactList = ({
             <i className='add icon'></i>
           </div>
         </Link>
-        {contacts.map((contact, key) => (
-          <ContactCard
-            contact={contact}
-            deleteContact={deleteContacts}
-            key={key}
-          />
-        ))}
+        {contacts.length > 0 ? (
+          contacts.map((contact, key) => (
+            <ContactCard
+              contact={contact}
+              deleteContact={deleteContacts}
+              key={key}
+            />
+          ))
+        ) : (
+          <h1>No Contacts Available</h1>
+        )}
       </div>
     </div>
   )
